@@ -1,4 +1,4 @@
-# WARISA KHAOPHONG
+# Name: WARISA KHAOPHONG
 # web_data_app.py
 # June 2024
 # Modified by: WARISA KHAOPHONG
@@ -99,5 +99,7 @@ def book_data():
 @app.route("/learn")
 def learn():
     # Return a string the describes one thing you learned in ENSF 692.
-    pass
+    return "One thing I learned in ENSF 692 is Pandas. Even though I'm still not proficient, I will strive to enhance my skills."
 
+if __name__ == "__main__":
+    app.run(debug=True) 
