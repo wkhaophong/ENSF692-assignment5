@@ -84,7 +84,7 @@ def book_data():
     # Create a DataFrame using the two lists
     book_data = pd.DataFrame(list(zip(titles, prices)), columns=['Titles','Prices'])   
 
-     # Calculate sale prices
+    # Calculate sale prices
     sale_prices = [price * 0.75 for price in prices]
 
     # Insert new column 'Sale Prices' into the DataFrame
