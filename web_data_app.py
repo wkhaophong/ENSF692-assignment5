@@ -1,3 +1,4 @@
+# WARISA KHAOPHONG
 # web_data_app.py
 # June 2024
 # Modified by: WARISA KHAOPHONG
@@ -81,7 +82,15 @@ def book_data():
         prices.append(float(book.find('p', class_="price_color").text[1:]))
 
     # Create a DataFrame using the two lists
-    book_data = pd.DataFrame(list(zip(titles, prices)), columns=['Titles','Prices'])    
+    book_data = pd.DataFrame(list(zip(titles, prices)), columns=['Titles','Prices'])   
+
+     # Calculate sale prices
+    sale_prices = [price * 0.75 for price in prices]
+
+    # Insert new column 'Sale Prices' into the DataFrame
+    book_data.insert(2, 'Sale Prices', sale_prices)
+
+
     print(book_data)        # Print to the terminal as confirmation - only we can see this
 
     # Format and print the DataFrame using the html template provided in the templates subdirectory
